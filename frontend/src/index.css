@@ -1,0 +1,584 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+/* ============================================================
+   FARMIQ DESIGN SYSTEM — GLOBAL VARIABLES & RESET
+   ============================================================ */
+:root {
+  /* ============================================================
+     FARMIQ — PREMIUM AGRICULTURE COLOR PALETTE
+     ============================================================ */
+
+  /* Brand colors */
+  --primary-green: #22C55E;
+  --emerald-500: #10B981;
+  --emerald-400: #4ADE80;
+  --dark-green: #064E3B;
+  --lime-accent: #84CC16;
+
+  /* Status colors */
+  --amber-warning: #FBBF24;
+  --sky-blue: #38BDF8;
+  --rose-danger: #F87171;
+
+  /* Light/Auth theme */
+  --bg-light-gradient:
+    linear-gradient(135deg,
+      #F6F8F1 0%,
+      #E8F5E9 50%,
+      #F0FDF4 100%);
+
+  --card-bg: rgba(255, 255, 255, 0.94);
+  --card-border: rgba(34, 197, 94, 0.16);
+  --card-radius: 16px;
+
+  --card-shadow:
+    0 8px 30px rgba(6, 78, 59, 0.08);
+
+  --card-hover-shadow:
+    0 14px 40px rgba(6, 78, 59, 0.14);
+
+  --transition-fast: 0.18s ease-out;
+
+  --font-primary:
+    'Outfit',
+    'Plus Jakarta Sans',
+    sans-serif;
+
+  /* Light mode */
+  --bg-gradient:
+    linear-gradient(135deg,
+      #F6F8F1 0%,
+      #E8F5E9 50%,
+      #F0FDF4 100%);
+
+  --text-dark: #123524;
+  --text-muted: #527064;
+
+  --shadow-md:
+    0 8px 24px rgba(6, 78, 59, 0.08);
+
+  /* ============================================================
+     DARK DASHBOARD — FOREST / EMERALD
+     ============================================================ */
+
+  --dark-bg-from: #071A12;
+  --dark-bg-mid: #0B2B1D;
+  --dark-bg-to: #0F5132;
+
+  /* Glass surfaces */
+  --dark-surface: rgba(255, 255, 255, 0.075);
+  --dark-surface-hover: rgba(255, 255, 255, 0.11);
+  --dark-surface-active: rgba(34, 197, 94, 0.13);
+
+  /* Borders */
+  --dark-border: rgba(255, 255, 255, 0.10);
+  --dark-border-accent: rgba(134, 239, 172, 0.30);
+
+  /* Text */
+  --dark-text-primary: #F7FCEB;
+  --dark-text-secondary: #D5E4D8;
+  --dark-text-muted: #9FB5A5;
+
+  /* Main accent */
+  --dark-accent: #4ADE80;
+  --dark-accent-dim: rgba(34, 197, 94, 0.18);
+
+  /* Sidebar aliases used by navigation */
+  --text-primary: var(--dark-text-primary);
+  --text-secondary: var(--dark-text-secondary);
+  --sidebar-active-bg: rgba(34, 197, 94, 0.14);
+  --sidebar-active-fg: #86EFAC;
+
+  /* FarmIQ extra colors */
+  --farm-mint: #86EFAC;
+  --farm-sky: #38BDF8;
+  --farm-soil: #A16207;
+  --farm-harvest: #FBBF24;
+
+  /* Radius */
+  --radius-lg: 18px;
+  --radius-xl: 22px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-primary);
+  background: var(--bg-light-gradient);
+  background-attachment: fixed;
+  color: var(--text-dark);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* ============================================================
+   DARK APP SCOPE — applies to everything inside .dark-app
+   ============================================================ */
+.dark-app {
+  --card-bg: var(--dark-surface);
+  --glass-border: var(--dark-border);
+  color: var(--dark-text-primary);
+
+  min-height: 100vh;
+  background:
+    radial-gradient(ellipse at 15% 20%,
+      rgba(34, 197, 94, 0.16) 0%,
+      transparent 45%),
+    radial-gradient(ellipse at 85% 80%,
+      rgba(56, 189, 248, 0.08) 0%,
+      transparent 40%),
+    linear-gradient(135deg,
+      var(--dark-bg-from) 0%,
+      var(--dark-bg-mid) 48%,
+      var(--dark-bg-to) 100%);
+  background-attachment: fixed;
+}
+
+/* ============================================================
+   DARK GLASS CARDS (used inside dark-app)
+   ============================================================ */
+.dark-glass-card {
+  background: linear-gradient(145deg,
+      rgba(255, 255, 255, 0.09),
+      rgba(134, 239, 172, 0.035));
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(134, 239, 172, 0.14);
+  border-radius: var(--radius-xl);
+
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+
+  padding: 24px;
+
+  transition: transform 0.22s ease-out,
+    border-color 0.22s ease-out,
+    box-shadow 0.22s ease-out;
+}
+
+.dark-glass-card:hover {
+  background: linear-gradient(145deg,
+      rgba(255, 255, 255, 0.12),
+      rgba(134, 239, 172, 0.055));
+
+  border-color: rgba(134, 239, 172, 0.30);
+
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 16px 45px rgba(0, 0, 0, 0.32),
+    0 0 25px rgba(34, 197, 94, 0.08);
+}
+
+.glass-panel {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  transition: var(--transition-fast);
+}
+
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  transition: var(--transition-fast);
+}
+
+.glass-card:hover {
+  box-shadow: var(--card-hover-shadow);
+  transform: translateY(-2px);
+}
+
+/* ============================================================
+   PREMIUM BUTTON SYSTEM
+   ============================================================ */
+
+/* Base button resets */
+button {
+  font-family: inherit;
+}
+
+/* PRIMARY (emerald gradient) */
+.btn-primary {
+  background: linear-gradient(135deg, #10B981 0%, #16A34A 100%);
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.32);
+  transition: var(--transition-fast);
+  min-height: 44px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.42);
+  filter: brightness(1.08);
+}
+
+.btn-primary::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0);
+  transition: background 0.18s ease-out;
+  border-radius: inherit;
+}
+
+.btn-primary:active:not(:disabled) {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.25);
+  transition: transform 0.10s ease-out, box-shadow 0.10s ease-out;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* SECONDARY (dark translucent, for dark backgrounds) */
+.btn-secondary-dark {
+  background: rgba(255, 255, 255, 0.08);
+  color: #E2E8F0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.18s ease-out, background 0.18s ease-out, border-color 0.18s ease-out, box-shadow 0.18s ease-out;
+  min-height: 44px;
+}
+
+.btn-secondary-dark:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.13);
+  border-color: rgba(52, 211, 153, 0.4);
+  color: #F8FAFC;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary-dark:active:not(:disabled) {
+  transform: translateY(0) scale(0.97);
+  transition: transform 0.10s ease-out;
+}
+
+/* SECONDARY (light backgrounds) */
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--dark-green);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(22, 163, 74, 0.25);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: transform 0.18s ease-out, background 0.18s ease-out, border-color 0.18s ease-out;
+  min-height: 44px;
+}
+
+.btn-secondary:hover:not(:disabled) {
+  background: #f0fdf4;
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+  transform: translateY(-2px);
+}
+
+.btn-secondary:active:not(:disabled) {
+  transform: scale(0.97);
+  transition: transform 0.10s ease-out;
+}
+
+/* DANGER */
+.btn-danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  font-weight: 600;
+  padding: 9px 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: transform 0.18s ease-out, background 0.18s ease-out;
+  min-height: 40px;
+}
+
+.btn-danger:hover:not(:disabled) {
+  background: rgba(239, 68, 68, 0.25);
+  transform: translateY(-1px);
+}
+
+.btn-danger:active:not(:disabled) {
+  transform: scale(0.97);
+}
+
+/* ICON BUTTON */
+.btn-icon {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--dark-text-secondary);
+  padding: 9px;
+  border-radius: 11px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.18s ease-out, background 0.18s ease-out, color 0.18s ease-out;
+  min-height: 40px;
+  min-width: 40px;
+}
+
+.btn-icon:hover {
+  background: rgba(52, 211, 153, 0.12);
+  color: var(--dark-accent);
+  transform: translateY(-1px);
+  border-color: rgba(52, 211, 153, 0.28);
+}
+
+.btn-icon:active {
+  transform: scale(0.95);
+  transition: transform 0.10s ease-out;
+}
+
+/* ============================================================
+   SPINNER (loading state)
+   ============================================================ */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 16px;
+  height: 16px;
+  border: 2.5px solid rgba(255, 255, 255, 0.35);
+  border-top-color: #ffffff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+.spinner-dark {
+  width: 16px;
+  height: 16px;
+  border: 2.5px solid rgba(52, 211, 153, 0.25);
+  border-top-color: #34D399;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   PAGE ENTRANCE ANIMATION
+   ============================================================ */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.25s ease-out forwards;
+}
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(134, 239, 172, 0.30);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(134, 239, 172, 0.55);
+}
+
+/* ============================================================
+   DARK APP SIDEBAR NAV (used by DashboardLayout inline)
+   ============================================================ */
+.sidebar-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  color: var(--dark-text-secondary);
+  font-weight: 500;
+  font-size: 0.91rem;
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: background 0.18s ease-out, color 0.18s ease-out, transform 0.15s ease-out;
+}
+
+.sidebar-btn:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--dark-text-primary);
+  transform: translateX(2px);
+}
+
+.sidebar-btn.active {
+  background: var(--sidebar-active-bg);
+  color: var(--sidebar-active-fg);
+  font-weight: 700;
+  border-left: 3px solid var(--sidebar-active-fg);
+  padding-left: 11px;
+}
+
+/* ============================================================
+   BADGE SYSTEM (preserved for light pages)
+   ============================================================ */
+.badge-demo {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.badge-live {
+  background: rgba(52, 211, 153, 0.12);
+  color: #34D399;
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* ============================================================
+   FORM INPUTS (light mode)
+   ============================================================ */
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(203, 213, 225, 0.8);
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  outline: none;
+  transition: border-color 0.18s ease-out, box-shadow 0.18s ease-out;
+  font-family: inherit;
+}
+
+.form-input:focus {
+  border-color: #10b981;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.15);
+}
+
+/* DARK FORM INPUT */
+.dark-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.07);
+  font-size: 0.95rem;
+  color: var(--dark-text-primary);
+  outline: none;
+  transition: border-color 0.18s ease-out, box-shadow 0.18s ease-out;
+  font-family: inherit;
+}
+
+.dark-input:focus {
+  border-color: rgba(52, 211, 153, 0.5);
+  background: rgba(255, 255, 255, 0.10);
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.12);
+}
+
+.dark-input::placeholder {
+  color: var(--dark-text-muted);
+}
+
+/* ============================================================
+   PULSE GLOW (Act Now card)
+   ============================================================ */
+@keyframes pulseGlow {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.0);
+  }
+
+  50% {
+    box-shadow: 0 0 20px 4px rgba(52, 211, 153, 0.12);
+  }
+}
+
+.pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+/* ============================================================
+   RESPONSIVE: hide sidebar on mobile, show hamburger
+   ============================================================ */
+@media (max-width: 768px) {
+  .desktop-sidebar {
+    display: none !important;
+  }
+
+  .main-content-shell {
+    margin-left: 0 !important;
+  }
+
+  .mobile-hamburger-btn {
+    display: flex !important;
+  }
+}

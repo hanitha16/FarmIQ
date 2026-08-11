@@ -8,12 +8,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, EmailStr
 import httpx
 
-from database import init_db, get_db_connection
-from auth import (
-    hash_password, verify_password, validate_password_strength,
-    create_access_token, get_current_user_id
+from .database import init_db, get_db_connection
+from .auth import (
+    hash_password,
+    verify_password,
+    validate_password_strength,
+    create_access_token,
+    get_current_user_id
 )
-
 app = FastAPI(title="FarmIQ API", version="1.0.0")
 
 app.add_middleware(
@@ -589,4 +591,4 @@ def get_seeds():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("main:app", host="127.0.0.1", port=8001, reload=True)
+    uvicorn.run("main:app", host="127.0.0.1", port=8000, reload=True)

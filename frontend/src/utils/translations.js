@@ -1,0 +1,211 @@
+export const translations = {
+  English: {
+    // Navigation
+    home: "Home",
+    scanner: "AI Crop Scanner",
+    weather: "Weather",
+    actnow: "Act Now",
+    planner: "Farm Planner",
+    seeds: "Seed Hub",
+    advisor: "AI Advisor",
+    alerts: "Alerts",
+    history: "Crop History",
+    loans: "Farmer Loans",
+    knowledge: "Knowledge Center",
+    settings: "Settings",
+    signOut: "Sign Out",
+    signIn: "Sign In",
+    signUp: "Sign Up",
+    getStarted: "Get Started →",
+
+    // Welcome Page
+    tagline: "Smart Farming. Smarter Decisions.",
+    heroDesc: "AI-powered guidance for healthier crops, better weather decisions and smarter farm planning.",
+    smartInsightsTitle: "🌱 Smart Insights",
+    smartInsightsDesc: "AI analyzes your farm data and provides smart insights.",
+    weatherIntelTitle: "🌦️ Weather Intelligence",
+    weatherIntelDesc: "Real-time weather updates and forecast for better planning.",
+    betterProdTitle: "📈 Better Productivity",
+    betterProdDesc: "Make data-driven decisions and grow your yield.",
+
+    // Sign Up & Login
+    createAccount: "Create Your Account",
+    signUpSub: "Join FarmIQ and start your smart farming journey.",
+    welcomeBack: "Welcome Back",
+    signInSub: "Sign in to continue to your account.",
+    fullName: "Full Name",
+    emailAddress: "Email Address",
+    mobileNumber: "Mobile Number",
+    password: "Password",
+    confirmPassword: "Confirm Password",
+    villageLocation: "Village / Location",
+    rememberMe: "Remember Me",
+    forgotPassword: "Forgot Password?",
+    alreadyAccount: "Already have an account? Sign In",
+    dontHaveAccount: "Don't have an account? Sign Up",
+
+    // Dashboard
+    goodMorning: "Good morning",
+    dashboardTitle: "Your FarmIQ dashboard",
+    actNowScore: "Act Now Score",
+    goodTimeToAct: "GOOD TIME TO ACT",
+    checkConditions: "CHECK CONDITIONS",
+    wait: "WAIT",
+    why: "Why",
+    bestActionWindow: "Best Action Window",
+    quickStatus: "Quick Farm Status",
+    cropHealth: "🌱 Crop Health",
+    diseaseRisk: "🦠 Disease Risk",
+    weatherRisk: "🌦️ Weather Risk",
+    waterRisk: "💧 Water Risk",
+
+    // Settings
+    profileDetails: "Profile Details",
+    displayMode: "Dashboard Display Mode",
+    simpleMode: "Simple Mode",
+    detailedMode: "Detailed Mode",
+    interfaceLanguage: "Interface Language",
+    saveChanges: "Save Profile Changes"
+  },
+  Telugu: {
+    // Navigation
+    home: "హోమ్",
+    scanner: "AI క్రాప్ స్కానర్",
+    weather: "వాతావరణం",
+    actnow: "యాక్ట్ నౌ (Act Now)",
+    planner: "ఫార్మ్ ప్లానర్",
+    seeds: "విత్తనాల హబ్",
+    advisor: "AI సలహాదారు",
+    alerts: "అలర్ట్‌లు",
+    history: "పంట హిస్టరీ",
+    loans: "రైతు రుణాలు",
+    knowledge: "జ్ఞాన కేంద్రం",
+    settings: "సెట్టింగ్‌లు",
+    signOut: "లాగ్ అవుట్",
+    signIn: "సైన్ ఇన్",
+    signUp: "సైన్ అప్",
+    getStarted: "ప్రారంభించండి →",
+
+    // Welcome Page
+    tagline: "స్మార్ట్ వ్యవసాయం. తెలివైన నిర్ణయాలు.",
+    heroDesc: "ఆరోగ్యకరమైన పంటలు మరియు వాతావరణ నిర్ణయాల కోసం AI మార్గదర్శకత్వం.",
+    smartInsightsTitle: "🌱 స్మార్ట్ సమాచారం",
+    smartInsightsDesc: "AI మీ వ్యవసాయ డేటాను విశ్లేషించి అవసరమైన సలహాలు ఇస్తుంది.",
+    weatherIntelTitle: "🌦️ వాతావరణ సమాచారం",
+    weatherIntelDesc: "మెరుగైన ప్రణాళిక కోసం నిజ-సమయ వాతావరణ సమాచారం.",
+    betterProdTitle: "📈 అధిక దిగుబడి",
+    betterProdDesc: "డేటా ఆధారిత నిర్ణయాలతో దిగుబడిని పెంచుకోండి.",
+
+    // Sign Up & Login
+    createAccount: "ఖాతాను సృష్టించండి",
+    signUpSub: "FarmIQ తో మీ స్మార్ట్ వ్యవసాయ ప్రయాణాన్ని ప్రారంభించండి.",
+    welcomeBack: "స్వాగతం",
+    signInSub: "మీ ఖాతాలోకి ప్రవేశించడానికి సైన్ ఇన్ చేయండి.",
+    fullName: "పూర్తి పేరు",
+    emailAddress: "ఇమెయిల్ అడ్రస్",
+    mobileNumber: "మొబైల్ సంఖ్య",
+    password: "పాస్‌వర్డ్",
+    confirmPassword: "పాస్‌వర్డ్ నిర్ధారణ",
+    villageLocation: "గ్రామం / ప్రాంతం",
+    rememberMe: "నన్ను గుర్తుంచుకో",
+    forgotPassword: "పాస్‌వర్డ్ మరచిపోయారా?",
+    alreadyAccount: "ఇప్పటికే ఖాతా ఉందా? సైన్ ఇన్ చేయండి",
+    dontHaveAccount: "ఖాతా లేదా? సైన్ అప్ చేయండి",
+
+    // Dashboard
+    goodMorning: "శుభోదయం",
+    dashboardTitle: "మీ FarmIQ డాష్‌బోర్డ్",
+    actNowScore: "యాక్ట్ నౌ స్కోర్",
+    goodTimeToAct: "పనికి అనుకూల సమయం",
+    checkConditions: "పరిస్థితులను తనిఖీ చేయండి",
+    wait: "వేచి ఉండండి",
+    why: "ఎందుకు",
+    bestActionWindow: "అత్యుత్తమ పని సమయం",
+    quickStatus: "త్వరిత వ్యవసాయ స్థితి",
+    cropHealth: "🌱 పంట ఆరోగ్యం",
+    diseaseRisk: "🦠 తెగులు ప్రమాదం",
+    weatherRisk: "🌦️ వాతావరణ ప్రమాదం",
+    waterRisk: "💧 నీటి ప్రమాదం",
+
+    // Settings
+    profileDetails: "ప్రొఫైల్ వివరాలు",
+    displayMode: "డిస్‌ప్లే మోడ్",
+    simpleMode: "సాధారణ మోడ్",
+    detailedMode: "వివరమైన మోడ్",
+    interfaceLanguage: "భాష ఎంపిక",
+    saveChanges: "మార్పులను సేవ్ చేయండి"
+  },
+  Hindi: {
+    // Navigation
+    home: "होम",
+    scanner: "एआई फसल स्कैनर",
+    weather: "मौसम",
+    actnow: "एक्ट नाउ (Act Now)",
+    planner: "फार्म प्लानर",
+    seeds: "बीज हब",
+    advisor: "एआई सलाहकार",
+    alerts: "अलर्ट",
+    history: "फसल इतिहास",
+    loans: "किसान ऋण",
+    knowledge: "ज्ञान केंद्र",
+    settings: "सेटिंग्स",
+    signOut: "साइन आउट",
+    signIn: "साइन इन",
+    signUp: "साइन अप",
+    getStarted: "शुरू करें →",
+
+    // Welcome Page
+    tagline: "स्मार्ट खेती। समझदार फैसले।",
+    heroDesc: "स्वस्थ फसलों और मौसम के सही फैसलों के लिए AI-आधारित मार्गदर्शन।",
+    smartInsightsTitle: "🌱 स्मार्ट जानकारी",
+    smartInsightsDesc: "AI आपके कृषि डेटा का विश्लेषण करके सलाह प्रदान करता है।",
+    weatherIntelTitle: "🌦️ मौसम की जानकारी",
+    weatherIntelDesc: "बेहतर योजना के लिए वास्तविक समय का मौसम अपडेट।",
+    betterProdTitle: "📈 बेहतर उत्पादकता",
+    betterProdDesc: "डेटा-आधारित फैसलों से अपनी उपज बढ़ाएं।",
+
+    // Sign Up & Login
+    createAccount: "अपना खाता बनाएं",
+    signUpSub: "FarmIQ के साथ अपनी स्मार्ट खेती की यात्रा शुरू करें।",
+    welcomeBack: "वापसी पर स्वागत है",
+    signInSub: "अपने खाते में जारी रखने के लिए साइन इन करें।",
+    fullName: "पूरा नाम",
+    emailAddress: "ईमेल पता",
+    mobileNumber: "मोबाइल नंबर",
+    password: "पासवर्ड",
+    confirmPassword: "पासवर्ड की पुष्टि करें",
+    villageLocation: "गांव / स्थान",
+    rememberMe: "मुझे याद रखें",
+    forgotPassword: "पासवर्ड भूल गए?",
+    alreadyAccount: "पहले से खाता है? साइन इन करें",
+    dontHaveAccount: "खाता नहीं है? साइन अप करें",
+
+    // Dashboard
+    goodMorning: "शुभ प्रभात",
+    dashboardTitle: "आपका FarmIQ डैशबोर्ड",
+    actNowScore: "एक्ट नाउ स्कोर",
+    goodTimeToAct: "कार्य करने का सही समय",
+    checkConditions: "स्थितियों की जांच करें",
+    wait: "प्रतीक्षा करें",
+    why: "क्यों",
+    bestActionWindow: "सर्वोत्तम कार्य समय",
+    quickStatus: "त्वरित स्थिति",
+    cropHealth: "🌱 फसल स्वास्थ्य",
+    diseaseRisk: "🦠 रोग जोखिम",
+    weatherRisk: "🌦️ मौसम जोखिम",
+    waterRisk: "💧 जल जोखिम",
+
+    // Settings
+    profileDetails: "प्रोफ़ाइल विवरण",
+    displayMode: "डैशबोर्ड मोड",
+    simpleMode: "सरल मोड",
+    detailedMode: "विस्तृत मोड",
+    interfaceLanguage: "भाषा का चयन",
+    saveChanges: "बदलाव सहेजें"
+  }
+};
+
+export const getTranslation = (lang, key) => {
+  const selectedDict = translations[lang] || translations.English;
+  return selectedDict[key] || translations.English[key] || key;
+};
