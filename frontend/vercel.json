@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://farm-iq-backend.onrender.com/api/:path*"
+    }
+  ]
+}
